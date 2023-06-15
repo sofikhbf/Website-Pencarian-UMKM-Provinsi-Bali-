@@ -16,6 +16,7 @@ class FooterBar extends HTMLElement {
               <li role="listitem"><a href="#/home" class="hover:text-gray-600 transition-all">Home</a></li>
               <li role="listitem"><a href="#/katalog" class="hover:text-gray-600 transition-all">Katalog</a></li>
               <li role="listitem"><a href="#/favorite" class="hover:text-gray-600 transition-all">Produk Yang Anda Sukai</a></li>
+              <li role="listitem"><a href="#/about-us" class="hover:text-gray-600 transition-all">Tentang Kami</a></li>
             </ul>
             <div class="text-center">
               <span class="text-sm tracking-wide"

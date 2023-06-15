@@ -31,6 +31,9 @@ class NavigationBar extends HTMLElement {
                   <li>
                     <a href="#/favorite" class="text-base text-gray-900 hover:text-secondary py-2 mx-6 flex transition duration-200 ease-in-out">Produk Disukai</a>
                   </li>
+                  <li>
+                    <a href="#/about-us" class="text-base text-gray-900 hover:text-secondary py-2 mx-6 flex transition duration-200 ease-in-out">Tentang Kami</a>
+                  </li>
                 </ul>
               </nav>
             </div>

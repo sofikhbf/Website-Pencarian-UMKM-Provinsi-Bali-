@@ -1,0 +1,28 @@
+{
+    "teams": [
+      {
+        "name": "Dimas Marsus Pandega",
+        "photo": "images/profile/dimas.png",
+        "role": "Fullstack Developer",
+        "instagram": "https://instagram.com/dimas_marsus",
+        "linkedin": "https://www.linkedin.com/in/dimas-marsus-pandega/",
+        "github": "https://github.com/dimasmarsus"
+      },
+      {
+        "name": "Muhammad Caesar Gilang Indrawan",
+        "photo": "images/profile/caesar.png",
+        "role": "Fullstack Developer",
+        "instagram": "https://www.instagram.com/muhammadcaesar19/",
+        "linkedin": "https://www.linkedin.com/in/muhammad-caesar-gilang-indrawan-558077248/",
+        "github": "https://github.com/Biji-Meledak"
+      },
+      {
+        "name": "Michael Tanaya",
+        "photo": "images/profile/michael.png",
+        "role": "Fullstack Developer",
+        "instagram": "https://www.instagram.com/fxen__/",
+        "linkedin": "https://www.linkedin.com/in/michael-tanaya-1aa307222/",
+        "github": "https://github.com/Michaeltan99"
+      }
+    ]
+  }
