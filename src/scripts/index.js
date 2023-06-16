@@ -11,6 +11,7 @@ import './components/favorite-page';
 import './components/search-bar';
 import './components/faq-section';
 import './components/hero-section';
+import './components/about-us';
 import './components/message-info';
 import 'tw-elements';
 import 'animate.css';
