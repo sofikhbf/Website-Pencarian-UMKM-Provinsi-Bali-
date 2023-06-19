@@ -12,9 +12,9 @@ class CardHome extends HTMLElement {
     const cardHome = (data) => /* html */ `
         <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 bg-opacity-50 shadow-2xl shadow-gray-600/10 hover:shadow-xl transition duration-200 ease-in-out">
           <div class="relative overflow-hidden rounded-xl">
-            <a href="#/katalog/${data.uuid}">
+            <a href="#/katalog/${data.id}">
               <img
-                src="${data.url}"
+                src="${data.image}"
                 alt="art cover"
                 loading="lazy"
                 width="1000"
@@ -24,15 +24,13 @@ class CardHome extends HTMLElement {
           </div>
           <div class="mt-6 relative">
             <h3 class="text-2xl font-semibold block">
-              <a href="#/katalog/${data.uuid}" class="cursor-pointer text-gray-900 hover:text-gray-600">${data.productName}</a>
+              <a href="#/katalog/${data.id}" class="cursor-pointer text-gray-900 hover:text-gray-600">${data.umkmName}</a>
             </h3>
-            <p class="text-sm font-semibold my-5 text-gray-600 text-clip">
-              ${data.user.name} - ${data.user.university}
-            </p>
+            
             <p class="mt-6 mb-8 text-gray-600">
               ${data.description.slice(0, 100)}...
             </p>
-            <a class="inline-block" href="#/katalog/${data.uuid}">
+            <a class="inline-block" href="#/katalog/${data.id}">
               <button
               type="button"
               data-mdb-ripple="true"

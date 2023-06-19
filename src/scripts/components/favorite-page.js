@@ -8,30 +8,30 @@ class ProductWishlist extends HTMLElement {
     const item = this._product;
     const cardList = (data) => /* html */ `
     <div class="flex flex-col bg-gray-100 rounded-b-lg shadow-gray-600/10 hover:shadow-xl transition duration-200 ease-in-out">
-      <a href="#/katalog/${data.uuid}" class="group h-96 block bg-gray-100 rounded-t-lg overflow-hidden relative">
-        <img src="${data.url}"
+      <a href="#/katalog/${data.id}" class="group h-96 block bg-gray-100 rounded-t-lg overflow-hidden relative">
+        <img src="${data.image}"
         loading="lazy" alt="Produk" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
       </a>
 
       
         <div class="flex justify-between items-start rounded-b-lg gap-2 p-4">
           <div class="flex flex-col">
-            <a href="#/katalog/${data.uuid}" class="text-gray-800 hover:text-gray-500 lg:text-lg font-bold transition duration-100">${data.productName}</a>
-            <span class="text-gray-500 text-sm lg:text-base">${data.user.name}</span>
+            <a href="#/katalog/${data.id}" class="text-gray-800 hover:text-gray-500 lg:text-lg font-bold transition duration-100">${data.umkmName}</a>
+            // <span class="text-gray-500 text-sm lg:text-base">${data.user.name}</span>
           </div>
 
           <div class="flex flex-col items-end">
-            <span class="text-gray-600 lg:text-lg font-bold">Rp.${data.price}</span>
+            <span class="text-gray-600 lg:text-lg font-bold">Rp.${data.description}</span>
           </div>
         </div>
 
-        <div class="flex self-end mt-auto p-4">
-          <a href="https://wa.me/62${data.user.telephone.slice(1, 12)}" target="_blank" rel="noopener noreferrer" aria-label="send wa" target="_blank" rel="noopener noreferrer" aria-label="send wa"
-            class="text-white bg-green-500 hover:bg-green-700 focus:ring-4 focus:ring-white-300 font-medium rounded-lg text-md px-5 py-3 text-center">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span class="ml-2">Hubungi Penjual</span> 
-          </a>
-        </div>
+        // <div class="flex self-end mt-auto p-4">
+        //   <a href="https://wa.me/62${data.user.telephone.slice(1, 12)}" target="_blank" rel="noopener noreferrer" aria-label="send wa" target="_blank" rel="noopener noreferrer" aria-label="send wa"
+        //     class="text-white bg-green-500 hover:bg-green-700 focus:ring-4 focus:ring-white-300 font-medium rounded-lg text-md px-5 py-3 text-center">
+        //     <i class="fa-brands fa-whatsapp"></i>
+        //     <span class="ml-2">Hubungi Penjual</span> 
+        //   </a>
+        // </div>
      
     </div>
     `;

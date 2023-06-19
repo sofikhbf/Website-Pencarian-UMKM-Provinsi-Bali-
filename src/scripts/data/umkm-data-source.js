@@ -5,14 +5,14 @@ axios.defaults.withCredentials = true;
 
 class UmkmSource {
   static async getAllProductsForGuest() {
-    const response = await fetch(API_ENDPOINT.ALL_PRODUCT_FOR_GUEST);
+    const response = await fetch(API_ENDPOINT.ALL_PRODUCT);
     const responseJson = await response.json();
     const product = await responseJson.data;
     return product;
   }
 
   static async getDetailAllProductsForGuest(id) {
-    const response = await fetch(API_ENDPOINT.DETAIL_PRODUCT_FOR_GUEST(id));
+    const response = await fetch(API_ENDPOINT.DETAIL_PRODUCT(id));
     return response.json();
   }
 }

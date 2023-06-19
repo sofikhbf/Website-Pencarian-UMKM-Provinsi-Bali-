@@ -10,9 +10,9 @@ const LikeButtonInitiator = {
   },
 
   async _renderButton() {
-    const { uuid } = this._product;
+    const { id } = this._product;
 
-    if (await this._isProductExist(uuid)) {
+    if (await this._isProductExist(id)) {
       this._renderLiked();
     } else {
       this._renderLike();

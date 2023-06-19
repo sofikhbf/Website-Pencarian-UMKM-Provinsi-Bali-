@@ -10,12 +10,12 @@ class ListSection extends HTMLElement {
     const cardList = (data) => /* html */ `
     <div class="bg-gray-50 card-item rounded-lg hover:shadow-xl transition duration-200 ease-in-out">
       <a
-        href="#/katalog/${data.uuid}"
+        href="#/katalog/${data.id}"
         class="group h-96 block rounded-t-lg overflow-hidden relative">
           <img
-            src="${data.url}"
+            src="${data.image}"
             loading="lazy"
-            alt="${data.productName}"
+            alt="${data.umkmName}"
             class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200"
           />
       </a>
@@ -23,19 +23,16 @@ class ListSection extends HTMLElement {
       <div class="flex justify-between items-start gap-2 p-6">
         <div class="flex flex-col">
           <a
-            href="#/katalog/${data.uuid}"
-            class="text-gray-800 hover:text-gray-500 lg:text-lg font-bold transition duration-100">${data.productName}
+            href="#/katalog/${data.id}"
+            class="text-gray-800 hover:text-gray-500 lg:text-lg font-bold transition duration-100">${data.umkmName}
           </a>
-          <span
-            class="text-gray-500 text-sm lg:text-base">
-            ${data.user.name} - ${data.user.university}
-          </span>
+          
         </div>
 
         <div class="flex flex-col items-end">
           <span
             class="text-gray-600 lg:text-lg font-bold">
-              Rp.${data.price}
+              Rp.${data.description}
           </span>
         </div>
       </div>
@@ -87,7 +84,7 @@ class ListSection extends HTMLElement {
     const searching = this.querySelector('#searchButtonElement');
     searching.addEventListener('click', () => {
       const keyword = this.querySelector('#searchElement').value;
-      const searchedProduct = item.filter((data) => data.productName.toUpperCase().includes(keyword.toUpperCase()));
+      const searchedProduct = item.filter((data) => data.umkmName.toUpperCase().includes(keyword.toUpperCase()));
       const card = document.querySelector('.carding');
       card.innerHTML = searchedProduct.map((data) => cardList(data)).reverse().join('');
     });
@@ -101,7 +98,7 @@ class ListSection extends HTMLElement {
         card.innerHTML = item.map((data) => cardList(data)).reverse().join('');
       }
 
-      const searchedProduct = item.filter((data) => data.productName.toUpperCase().includes(keyword.toUpperCase()));
+      const searchedProduct = item.filter((data) => data.umkmName.toUpperCase().includes(keyword.toUpperCase()));
       card.innerHTML = searchedProduct.map((data) => cardList(data)).reverse().join('');
     });
   }
