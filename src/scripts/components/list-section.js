@@ -28,11 +28,26 @@ class ListSection extends HTMLElement {
           </a>
           
         </div>
-
-        <div class="flex flex-col items-end">
+        </div>
+        <div>
+        <div>
+        <span
+        class="lg:text-lg font-bold transition duration-100 text-red-500 items-start gap-2 p-6 items-end">
+        Rating ${data.rating}
+        </span>
+        </div>
+        <div class="flex flex-col items-justify items-start gap-2 p-6">
           <span
-            class="text-gray-600 lg:text-lg font-bold">
-              Rp.${data.description}
+            class="text-gray-600 lg:text-lg">
+              Alamat ${data.alamat}
+          </span>
+          <span
+            class="text-gray-600 lg:text-lg">
+              No. ${data.phone}
+          </span>
+          <span
+            class="text-gray-600 lg:text-lg">
+              Deskripsi ${data.description}
           </span>
         </div>
       </div>
@@ -47,21 +62,7 @@ class ListSection extends HTMLElement {
             <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4">Semua Produk</h2>
             <p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">Menampilkan semua produk yang ada di UMKM KITA</p>
             <div class="py-5 flex flex-col items-center md:flex-row md:justify-between">
-              <!-- searching -->
-              <search-bar></search-bar>
-              <!-- sorting -->
-              <label for="SortBy" class="sr-only"> Sort </label>
-    
-              <select
-                id="SortBy"
-                name="sort_by"
-                class="rounded-md border text-sm py-3 px-4 w-[330px] md:w-60"
-                >
-                <option readOnly>Pilih Kategori...</option>
-                <option>Fashion</option>
-                <option>Kerajinan Tangan</option>
-                <option>Makanan</option>
-              </select>
+            
             </div>
           </div>
 
@@ -103,5 +104,19 @@ class ListSection extends HTMLElement {
     });
   }
 }
+// <!-- searching -->
+// <search-bar></search-bar>
+// <!-- sorting -->
+// <label for="SortBy" class="sr-only"> Sort </label>
 
+// <select
+//   id="SortBy"
+//   name="sort_by"
+//   class="rounded-md border text-sm py-3 px-4 w-[330px] md:w-60"
+//   >
+//   <option readOnly>Pilih Kategori...</option>
+//   <option>Fashion</option>
+//   <option>Kerajinan Tangan</option>
+//   <option>Makanan</option>
+// </select>
 customElements.define('list-section', ListSection);

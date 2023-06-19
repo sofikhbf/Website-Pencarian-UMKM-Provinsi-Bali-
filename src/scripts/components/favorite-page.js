@@ -20,12 +20,12 @@ class ProductWishlist extends HTMLElement {
           </div>
 
           <div class="flex flex-col items-end">
-            <span class="text-gray-600 lg:text-lg font-bold">Rp.${data.description}</span>
+            <span class="text-gray-600 lg:text-lg font-bold">${data.description}</span>
           </div>
         </div>
 
         <div class="flex self-end mt-auto p-4">
-          <a href="https://wa.me/62${data.user.telephone.slice(1, 12)}" target="_blank" rel="noopener noreferrer" aria-label="send wa" target="_blank" rel="noopener noreferrer" aria-label="send wa"
+          <a href="https://wa.me/62${data.phone.slice(1, 12)}" target="_blank" rel="noopener noreferrer" aria-label="send wa" target="_blank" rel="noopener noreferrer" aria-label="send wa"
             class="text-white bg-green-500 hover:bg-green-700 focus:ring-4 focus:ring-white-300 font-medium rounded-lg text-md px-5 py-3 text-center">
             <i class="fa-brands fa-whatsapp"></i>
             <span class="ml-2">Hubungi Penjual</span> 
